@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Electron</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- <h1>Hello Electron</h1>
+    <p>Node Version:
+        <script>document.write(process.versions.node)</script>
+    </p>
+    <p>Chrome Version:
+        <script>document.write(process. .chrome)</script>
+    </p>
+    <p>Electron Version:
+        <script>document.write(process.versions.electron)</script>
+    </p>
+    <hr> -->
+    <div class="container-fluid">
+        <div class="form-row">
+            <div class="form-group col-12">
+                <label for="host">伺服器：</label><input type='text' class="form-control" id='host' value='mqtt://test.mosquitto.org' />
+            </div>
+            <div class="form-group col-6">
+                <label for="topic">名稱：</label><input type='text' class="form-control" id='user' value="Evan" />
+            </div>
+            <div class="form-group col-6">
+                <label for="topic">訂閱頻道：</label><input type='text' class="form-control" id='topic' value="Home" />
+            </div>
+        </div>
+        <nav>
+            <div class="nav nav-tabs">
+                <a class="nav-item nav-link active" data-toggle="tab" href="#nav_1">Home <span>X</span></a>
+                <!-- <a class="nav-item nav-link" data-toggle="tab" href="#nav_2">Profile <span>X</span></a> -->
+                <a class="nav-item nav-link add_nav" data-toggle="tab" href="#">+</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav_1">
+                <br>
+                <div class="container-fluid">
+                    <div id="chatbox" style="border:2px #FFAC55 solid "></div>
+                    <hr>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="userspan">Evan</span>
+                        </div>
+                        <input type="text" class="form-control" id="inputbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="nav.js"></script>
+</body>
+
+</html>
